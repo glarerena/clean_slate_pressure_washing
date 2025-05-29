@@ -1,12 +1,12 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Professional Pressure Washing & Detailing",
+  "text": "Pressure Washing\n• Driveway & Sidewalk Cleaning\n• House & Fence Washing\n• Deck & Patio Cleaning\n• Commercial Property & Fleet Washing\nCar Detailing\n• Exterior Wash & Wax\n• Interior Deep Clean\n• Leather Cleaning & Cond.\n• Headlight Restoration",
   "button": [
     {
-      "title": "Explore"
+      "title": "Explore Services"
     },
     {
-      "title": "Learn more",
+      "title": "Get a Free Quote",
       "color": "#fff"
     }
   ]

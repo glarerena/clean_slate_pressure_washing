@@ -1,16 +1,16 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Reliable, Fast & Locally Owned",
+  "text": "At Clean Slate Pressure Washing, we deliver professional, efficient, and high-quality service with every job. Whether it’s residential, commercial, or vehicle detailing, we’re committed to making your property look its best.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
-      "icon": "notes.svg"
+      "title": "Why Choose Us?",
+      "content": "We show up on time, treat your property with care, and leave it cleaner than we found it. With top-rated customer service and attention to detail, we aim to exceed expectations every time.",
+      "icon": "clean.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
-      "icon": "notes.svg"
+      "title": "Locally Owned & Operated",
+      "content": "We’re a small business built by a local family that takes pride in serving our community. When you hire Clean Slate, you support real people—not a big chain.",
+      "icon": "clean.svg"
     }
   ]
 }
