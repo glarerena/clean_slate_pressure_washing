@@ -18,6 +18,7 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
       behavior: "smooth",
     });
   };
+
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>

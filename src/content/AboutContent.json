@@ -1,16 +1,6 @@
 {
-  "title": "Reliable, Fast & Locally Owned",
-  "text": "At Clean Slate Pressure Washing, we deliver professional, efficient, and high-quality service with every job. Whether it’s residential, commercial, or vehicle detailing, we’re committed to making your property look its best.",
-  "section": [
-    {
-      "title": "Why Choose Us?",
-      "content": "We show up on time, treat your property with care, and leave it cleaner than we found it. With top-rated customer service and attention to detail, we aim to exceed expectations every time.",
-      "icon": "clean.svg"
-    },
-    {
-      "title": "Locally Owned & Operated",
-      "content": "We’re a small business built by a local family that takes pride in serving our community. When you hire Clean Slate, you support real people—not a big chain.",
-      "icon": "clean.svg"
-    }
-  ]
+  "title": "About Our Family",
+  "text": "Clean Slate Pressure Washing is more than a business—it's a family effort. Run by Jamer, Nora, and Erin, we take pride in working together to restore the beauty of homes, vehicles, and businesses. Every job is personal to us, and our goal is to leave each customer with a smile and a truly clean slate.",
+  "icon": "jamer nora and erin.jpg"
 }
+

@@ -1,13 +1,10 @@
 import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
+import AboutContent from "../../content/AboutContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
@@ -16,41 +13,36 @@ const Home = () => {
   return (
     <Container>
       <ScrollToTop />
+
+      {/* Services Section */}
       <ContentBlock
         direction="right"
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        icon="developer.svg"
-        id="intro"
+        icon={IntroContent.icon}
+        id="services"
       />
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
+
+      {/* Gallery Section */}
       <ContentBlock
         direction="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
-        id="about"
-      />
-      <ContentBlock
-        direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
+        icon={MissionContent.icon}
+        id="gallery"
       />
+
+      {/* About Us Section */}
       <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
+        direction="right"
+        title={AboutContent.title}
+        content={AboutContent.text}
+        icon={AboutContent.icon}
+        id="aboutus"
       />
+
+      {/* Contact Section */}
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}
