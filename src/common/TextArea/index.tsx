@@ -1,17 +1,28 @@
+import React from "react";
 import { withTranslation } from "react-i18next";
-import { StyledTextArea, StyledContainer } from "./styles";
-import { InputProps } from "../types";
+import { StyledContainer, StyledTextArea } from "./styles";
 
-const TextArea = ({ name, placeholder, onChange, t }: InputProps) => (
-  <StyledContainer>
-    <StyledTextArea
-      placeholder={t(placeholder)}
-      id={name}
-      name={name}
-      onChange={onChange}
-    />
-  </StyledContainer>
-);
+interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  name: string;
+  placeholder?: string;
+  t: (key: string) => string;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+}
+
+const TextArea = ({ name, placeholder, t, onChange, ...rest }: Props) => {
+  return (
+    <StyledContainer>
+      <StyledTextArea
+        id={name}
+        name={name}
+        placeholder={placeholder ? t(placeholder) : ""}
+        onChange={onChange}
+        {...rest}
+      />
+    </StyledContainer>
+  );
+};
 
 export default withTranslation()(TextArea);
+
 

@@ -7,6 +7,7 @@ export interface ContainerProps {
 export interface ButtonProps {
   color?: string;
   name?: string;
+  type?: string;
   children: React.ReactNode;
   onClick?: () => void;
 }
@@ -20,14 +21,11 @@ export interface SvgIconProps {
 export interface InputProps {
   name: string;
   placeholder: string;
-  t: TFunction;
   type?: string;
   value?: string;
-  onChange: (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => void;
+  required?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  t?: (key: string) => string;
 }
 export interface validateProps {
   name: string;
