@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
+import styled from "styled-components";
 
 import i18n from "i18next";
 import {
@@ -26,22 +27,63 @@ interface SocialLinkProps {
   src: string;
 }
 
+const StyledSocialLink = styled.a`
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
+const GoogleReviewsLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #18216d;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #ff8260;
+  }
+
+  .stars {
+    color: #fbbc04;
+    font-size: 1.2rem;
+  }
+
+  .review-count {
+    font-size: 0.9rem;
+    color: #666;
+  }
+`;
+
 const Footer = ({ t }: { t: TFunction }) => {
   const handleChange = (language: string) => {
     i18n.changeLanguage(language);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
-      <a
+      <StyledSocialLink
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         key={src}
         aria-label={src}
       >
-        <SvgIcon src={src} width="25px" height="25px" />
-      </a>
+        <SvgIcon src={src} width="40px" height="40px" />
+      </StyledSocialLink>
     );
   };
 
@@ -57,6 +99,14 @@ const Footer = ({ t }: { t: TFunction }) => {
               <a href="mailto:cleanslatewashing@gmail.com">
                 <Chat>Email Us</Chat>
               </a>
+              <GoogleReviewsLink 
+                href="https://g.co/kgs/TCdz4Uy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span className="stars">★★★★★</span>
+                <span className="review-count">Read our reviews</span>
+              </GoogleReviewsLink>
             </Col>
 
             <Col lg={8} md={8} sm={12} xs={24}>
@@ -97,17 +147,14 @@ const Footer = ({ t }: { t: TFunction }) => {
             align="middle"
             style={{ paddingTop: "3rem" }}
           >
-            <NavLink to="/">
-              <LogoContainer>
-                <SvgIcon
-                  src="clean.svg"
-                  aria-label="CleanSlate Pressure Washing"
-                  width="130px"
-                  height="auto"
-                />
-              </LogoContainer>
-
-            </NavLink>
+            <LogoContainer onClick={scrollToTop} style={{ cursor: 'pointer' }}>
+              <SvgIcon
+                src="clean.svg"
+                aria-label="CleanSlate Pressure Washing"
+                width="130px"
+                height="auto"
+              />
+            </LogoContainer>
             <FooterContainer>
               <SocialLink
                 href="https://www.facebook.com/profile.php?id=61573298500600"

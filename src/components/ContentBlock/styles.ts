@@ -14,8 +14,12 @@ export const Content = styled("p")`
   margin: 1.5rem 0 2rem 0;
 `;
 
-export const StyledRow = styled(Row)`
-  flex-direction: ${({ direction }: { direction: string }) =>
+interface StyledRowProps {
+  direction: "left" | "right";
+}
+
+export const StyledRow = styled(Row)<StyledRowProps>`
+  flex-direction: ${({ direction }) =>
     direction === "left" ? "row" : "row-reverse"};
 `;
 
@@ -58,5 +62,18 @@ export const ButtonWrapper = styled("div")`
 
   button:last-child {
     margin-left: 20px;
+  }
+`;
+
+export const VideoContainer = styled("div")`
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 `;

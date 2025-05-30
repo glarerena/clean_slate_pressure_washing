@@ -11,6 +11,10 @@ export const ContactContainer = styled("div")`
 export const FormGroup = styled("form")`
   width: 100%;
   max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
   @media only screen and (max-width: 1045px) {
     max-width: 100%;
@@ -27,10 +31,26 @@ export const Span = styled("span")`
 `;
 
 export const ButtonContainer = styled("div")`
-  text-align: end;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
 
   @media only screen and (max-width: 414px) {
     padding-top: 0.75rem;
+  }
+`;
+
+export const BlockWrapper = styled("div")`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 2rem;
+  margin-top: -8rem;
+
+  @media only screen and (max-width: 1045px) {
+    padding-right: 0;
+    text-align: center;
+    margin-top: 0;
   }
 `;

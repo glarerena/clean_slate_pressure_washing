@@ -25,7 +25,7 @@ export const NavLink = styled(Link)`
   &:hover,
   &:active,
   &:focus {
-    color: #15418e;
+    color: #ff8260;
   }
 `;
 
@@ -51,7 +51,7 @@ export const Para = styled("div")`
 
 export const Large = styled(Link)`
   font-size: 16px;
-  color: #000;
+  color: #18216d;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -62,9 +62,9 @@ export const Large = styled(Link)`
   max-width: max-content;
 
   &:hover {
-    color: rgb(255, 130, 92);
+    color: #ff8260;
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    text-decoration: #ff8260 wavy underline;
   }
 `;
 
@@ -77,8 +77,8 @@ export const Chat = styled("p")`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
+    border-bottom: 1px solid #ff8260;
+    color: #ff8260;
   }
 `;
 
@@ -97,31 +97,35 @@ export const FooterContainer = styled("div")`
   transition: all 0.1s ease-in-out;
 
   a {
+    display: inline-block;
+    margin: 0 15px;
+    transition: all 0.3s ease-in-out;
+
     &:hover,
     &:active,
     &:focus {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1);
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      transition: all 0.3s ease-in-out;
+      fill: #18216d;
+
+      &:hover {
+        fill: #ff8260;
+      }
     }
   }
 
   @media screen and (max-width: 769px) {
     width: auto;
+    justify-content: center;
 
     a:not(:last-child) {
-      display: none;
-    }
-  }
-
-  div {
-    cursor: pointer;
-    margin-right: 15px;
-    width: 25px;
-    height: 25px;
-
-    &:hover {
-      fill: rgb(255, 130, 92);
+      display: inline-block;
     }
   }
 `;
@@ -157,8 +161,6 @@ export const LanguageSwitch = styled("div")`
   &:hover,
   &:active,
   &:focus {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
 `;

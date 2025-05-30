@@ -1,0 +1,34 @@
+{
+  "title": "Our Work",
+  "subtitle": "See the difference we make",
+  "images": [
+    {
+      "id": 1,
+      "title": "House Pressure Washing",
+      "description": "Before and after of a residential home pressure washing",
+      "beforeImage": "/img/gallery/house-before.jpg",
+      "afterImage": "/img/gallery/house-after.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Deck Restoration",
+      "description": "Complete deck cleaning and restoration",
+      "beforeImage": "/img/gallery/deck-before.jpg",
+      "afterImage": "/img/gallery/deck-after.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Driveway Cleaning",
+      "description": "Driveway pressure washing results",
+      "beforeImage": "/img/gallery/driveway-before.jpg",
+      "afterImage": "/img/gallery/driveway-after.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Car Detailing",
+      "description": "Professional car detailing service",
+      "beforeImage": "/img/gallery/car-before.jpg",
+      "afterImage": "/img/gallery/car-after.jpg"
+    }
+  ]
+} 

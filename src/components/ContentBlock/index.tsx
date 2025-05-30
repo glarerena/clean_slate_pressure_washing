@@ -1,10 +1,10 @@
+import React from "react";
 import { Row, Col } from "antd";
-import { Fade } from "react-awesome-reveal";
-import { withTranslation } from "react-i18next";
-
-import { ContentBlockProps } from "./types";
-import { Button } from "../../common/Button";
+import { withTranslation, TFunction } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
+import { Button } from "../../common/Button";
+import { ContentBlockProps } from "./types";
+import { Fade } from "react-awesome-reveal";
 import {
   ContentSection,
   Content,
@@ -14,6 +14,7 @@ import {
   MinPara,
   StyledRow,
   ButtonWrapper,
+  VideoContainer,
 } from "./styles";
 
 const ContentBlock = ({
@@ -33,6 +34,8 @@ const ContentBlock = ({
     });
   };
 
+  const isVideo = icon?.endsWith('.mov') || icon?.endsWith('.mp4');
+
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
@@ -43,7 +46,18 @@ const ContentBlock = ({
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width="100%" height="100%" />
+            {isVideo ? (
+              <VideoContainer>
+                <video
+                  src={`/${icon}`}
+                  controls
+                  poster="/img/icons/cleanslate-logo.png"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </VideoContainer>
+            ) : (
+              <SvgIcon src={icon} width="100%" height="100%" />
+            )}
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>

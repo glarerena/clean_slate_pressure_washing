@@ -23,24 +23,25 @@ const Header = ({ t }: { t: TFunction }) => {
     setVisibility(!visible);
   };
 
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+    setVisibility(false);
+  };
+
   const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("services")}>
           <Span>{t("Services")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("gallery")}>
+        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Gallery")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("aboutus")}>
-          <Span>{t("About Us")}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+          <Span>{t("Family")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
@@ -57,18 +58,22 @@ const Header = ({ t }: { t: TFunction }) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <Row justify="space-between" align="middle">
+          <LogoContainer to="/" onClick={() => scrollTo("contact")} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '20px' }}>
             <img
               src="/img/icons/cleanslate-logo.png"
-              alt="CleanSlate Pressure Washing"
-              style={{ height: "64px", objectFit: "contain" }}
+              alt="Clean Slate"
+              style={{ width: "130px", height: "auto", objectFit: "contain" }}
             />
-            <span style={{ fontSize: "1.3rem", fontWeight: "bold", color: "#18216d" }}>
-              CleanSlate Pressure Washing
+            <span style={{ 
+              fontSize: "1.5rem", 
+              fontWeight: "bold", 
+              color: "#18216d",
+              marginTop: "15px"
+            }}>
+              Clean Slate
             </span>
           </LogoContainer>
-
 
           <NotHidden>
             <MenuItem />
