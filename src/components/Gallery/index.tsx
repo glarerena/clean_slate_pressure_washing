@@ -50,11 +50,13 @@ const Gallery = ({ t }: { t: TFunction }) => {
                   <BeforeImage
                     src={image.beforeImage}
                     alt={`${image.title} - Before`}
+                    loading="lazy"
                     style={{ opacity: hoveredImage === image.id ? 0 : 1 }}
                   />
                   <AfterImage
                     src={image.afterImage}
                     alt={`${image.title} - After`}
+                    loading="lazy"
                     style={{ opacity: hoveredImage === image.id ? 1 : 0 }}
                   />
                   <ComparisonLabel>
