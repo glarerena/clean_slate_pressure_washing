@@ -1,10 +1,8 @@
+import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-import styled from "styled-components";
-
-import i18n from "i18next";
+import { SvgIcon } from "../../common/SvgIcon";
 import {
   FooterSection,
   Title,
@@ -14,18 +12,9 @@ import {
   Para,
   Large,
   Chat,
-  Empty,
-  FooterContainer,
   Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
 } from "./styles";
-
-interface SocialLinkProps {
-  href: string;
-  src: string;
-}
+import styled from "styled-components";
 
 const StyledSocialLink = styled.a`
   display: inline-block;
@@ -45,6 +34,7 @@ const GoogleReviewsLink = styled.a`
   text-decoration: none;
   color: #18216d;
   transition: all 0.3s ease;
+  font-size: 1.1rem;
 
   &:hover {
     color: #ff8260;
@@ -61,30 +51,27 @@ const GoogleReviewsLink = styled.a`
   }
 `;
 
-const Footer = ({ t }: { t: TFunction }) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+const ContactInfo = styled.div`
+  margin-top: 1rem;
+  
+  a {
+    color: #18216d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+    
+    &:hover {
+      color: #ff8260;
+    }
+  }
+`;
 
+const Footer = ({ t }: { t: TFunction }) => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  };
-
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
-    return (
-      <StyledSocialLink
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        key={src}
-        aria-label={src}
-      >
-        <SvgIcon src={src} width="40px" height="40px" />
-      </StyledSocialLink>
-    );
   };
 
   return (
@@ -96,9 +83,11 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Language>{t("Contact")}</Language>
               <Large as="div">Call or Text: (804) 661-2841</Large>
               <Para>Serving Danville, VA and nearby areas</Para>
-              <a href="mailto:cleanslatewashing@gmail.com">
-                <Chat>Email Us</Chat>
-              </a>
+              <ContactInfo>
+                <a href="mailto:cleanslatewashing@gmail.com">
+                  cleanslatewashing@gmail.com
+                </a>
+              </ContactInfo>
               <GoogleReviewsLink 
                 href="https://g.co/kgs/TCdz4Uy" 
                 target="_blank" 
@@ -114,28 +103,6 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Large as="div">Pressure Washing</Large>
               <Large as="div">Car Detailing</Large>
             </Col>
-
-            {/* <Col lg={6} md={6} sm={12} xs={24}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="English"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="Spanish"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
-            </Col> */}
           </Row>
         </Container>
       </FooterSection>
@@ -155,20 +122,16 @@ const Footer = ({ t }: { t: TFunction }) => {
                 height="auto"
               />
             </LogoContainer>
-            <FooterContainer>
-              <SocialLink
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+              <StyledSocialLink
                 href="https://www.facebook.com/profile.php?id=61573298500600"
-                src="blue.svg"
-              />
-              <SocialLink
-                href="https://github.com/your-github"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/your-linkedin"
-                src="linkedin.svg"
-              />
-            </FooterContainer>
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <SvgIcon src="blue.svg" width="40px" height="40px" />
+              </StyledSocialLink>
+            </div>
           </Row>
         </Container>
       </Extra>
