@@ -38,10 +38,13 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Services")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Gallery")}</Span>
+          <Span>{t("Mission")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("Family")}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo("gallery")}>
+          <Span>{t("Gallery")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
@@ -59,18 +62,29 @@ const Header = ({ t }: { t: TFunction }) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between" align="middle">
-          <LogoContainer to="/" onClick={() => scrollTo("contact")} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <LogoContainer
+            to="/"
+            onClick={() => scrollTo("contact")}
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+            }}
+          >
             <img
               src="/img/icons/cleanslate-logo.png"
               alt="Clean Slate"
               style={{ width: "130px", height: "auto", objectFit: "contain" }}
             />
-            <span style={{ 
-              fontSize: "1.5rem", 
-              fontWeight: "bold", 
-              color: "#18216d",
-              marginTop: "15px"
-            }}>
+            <span
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                color: "#18216d",
+                marginTop: "15px",
+              }}
+            >
               Clean Slate
             </span>
           </LogoContainer>

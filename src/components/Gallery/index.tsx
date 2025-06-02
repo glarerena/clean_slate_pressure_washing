@@ -24,7 +24,7 @@ interface GalleryContent {
 
 const Gallery = ({ t }: { t: TFunction }) => {
   return (
-    <GallerySection>
+    <GallerySection id="gallery">
       <Container>
         <Fade direction="up">
           <Title>{t(galleryContent.title)}</Title>

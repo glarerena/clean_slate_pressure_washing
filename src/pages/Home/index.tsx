@@ -5,6 +5,7 @@ import ScrollToTop from "../../common/ScrollToTop";
 import ContentBlock from "../../components/ContentBlock";
 import ContactForm from "../../components/ContactForm";
 import Map from "../../components/Map";
+import Gallery from "../../components/Gallery"; // ✅ ADDED
 import MissionContent from "../../content/MissionContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import ContactContent from "../../content/ContactContent.json";
@@ -36,6 +37,9 @@ const Home = () => {
           icon={AboutContent.icon}
           id="about"
         />
+        
+        <Gallery /> {/* ✅ GALLERY SECTION HERE */}
+
         <ContactForm
           title={ContactContent.title}
           content={ContactContent.text}
@@ -48,3 +52,4 @@ const Home = () => {
 };
 
 export default withTranslation()(Home);
+
