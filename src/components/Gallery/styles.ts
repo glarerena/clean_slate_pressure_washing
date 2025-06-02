@@ -30,23 +30,34 @@ export const Subtitle = styled("p")`
 
 export const ImageContainer = styled("div")`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
-  height: 400px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
 
-  @media screen and (max-width: 768px) {
-    height: 300px;
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 export const ImageWrapper = styled("div")`
   position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -58,6 +69,29 @@ export const Image = styled("img")`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.3s ease;
+`;
+
+export const BeforeAfterContainer = styled("div")`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`;
+
+export const BeforeImage = styled(Image)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+`;
+
+export const AfterImage = styled(Image)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
   transition: opacity 0.3s ease;
 `;
 
@@ -91,4 +125,16 @@ export const ImageTitle = styled("h3")`
 export const ImageDescription = styled("p")`
   font-size: 1rem;
   margin: 0;
+`;
+
+export const ComparisonLabel = styled("div")`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  z-index: 2;
 `; 

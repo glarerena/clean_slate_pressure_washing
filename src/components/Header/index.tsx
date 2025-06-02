@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Row, Col, Drawer } from "antd";
+import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -14,6 +14,8 @@ import {
   Label,
   Outline,
   Span,
+  StyledDrawer,
+  MenuItem
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -96,7 +98,12 @@ const Header = ({ t }: { t: TFunction }) => {
             <Outline />
           </Burger>
         </Row>
-        <Drawer closable={false} open={visible} onClose={toggleButton}>
+        <StyledDrawer
+          closable={false}
+          open={visible}
+          onClose={toggleButton}
+          placement="right"
+        >
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={toggleButton}>
               <Col span={12}>
@@ -108,7 +115,7 @@ const Header = ({ t }: { t: TFunction }) => {
             </Label>
           </Col>
           <MenuItem />
-        </Drawer>
+        </StyledDrawer>
       </Container>
     </HeaderSection>
   );

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import { GallerySection, Title, Subtitle, ImageContainer, ImageWrapper, Image, ImageOverlay, ImageTitle, ImageDescription } from "./styles";
+import {
+  GallerySection,
+  Title,
+  Subtitle,
+  ImageContainer,
+  ImageWrapper,
+  BeforeAfterContainer,
+  BeforeImage,
+  AfterImage,
+  ImageOverlay,
+  ImageTitle,
+  ImageDescription,
+  ComparisonLabel
+} from "./styles";
 import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
 import { Fade } from "react-awesome-reveal";
 import galleryContent from "../../content/GalleryContent.json";
 
@@ -23,6 +34,8 @@ interface GalleryContent {
 }
 
 const Gallery = ({ t }: { t: TFunction }) => {
+  const [hoveredImage, setHoveredImage] = useState<number | null>(null);
+
   return (
     <GallerySection id="gallery">
       <Container>
@@ -30,9 +43,27 @@ const Gallery = ({ t }: { t: TFunction }) => {
           <Title>{t(galleryContent.title)}</Title>
           <Subtitle>{t(galleryContent.subtitle)}</Subtitle>
           <ImageContainer>
-            {galleryContent.images.map((image: GalleryImage, index: number) => (
-              <ImageWrapper key={index}>
-                <Image src={image.beforeImage} alt={image.title} />
+            {galleryContent.images.map((image: GalleryImage) => (
+              <ImageWrapper
+                key={image.id}
+                onMouseEnter={() => setHoveredImage(image.id)}
+                onMouseLeave={() => setHoveredImage(null)}
+              >
+                <BeforeAfterContainer>
+                  <BeforeImage
+                    src={image.beforeImage}
+                    alt={`${image.title} - Before`}
+                    style={{ opacity: hoveredImage === image.id ? 0 : 1 }}
+                  />
+                  <AfterImage
+                    src={image.afterImage}
+                    alt={`${image.title} - After`}
+                    style={{ opacity: hoveredImage === image.id ? 1 : 0 }}
+                  />
+                  <ComparisonLabel>
+                    {hoveredImage === image.id ? "After" : "Before"}
+                  </ComparisonLabel>
+                </BeforeAfterContainer>
                 <ImageOverlay>
                   <ImageTitle>{t(image.title)}</ImageTitle>
                   <ImageDescription>{t(image.description)}</ImageDescription>
