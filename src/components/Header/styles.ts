@@ -99,31 +99,8 @@ export const Label = styled("span")`
   align-items: center;
 `;
 
-export const Outline = styled("span")`
-  width: 30px;
-  height: 3px;
-  background: #18216d;
-  display: block;
-  position: relative;
-  transition: all 0.3s ease;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background: #18216d;
-    transition: all 0.3s ease;
-  }
-
-  &:before {
-    transform: translateY(-8px);
-  }
-
-  &:after {
-    transform: translateY(8px);
-  }
+export const Outline = styled(MenuOutlined)`
+  font-size: 22px;
 `;
 
 export const Span = styled("span")`

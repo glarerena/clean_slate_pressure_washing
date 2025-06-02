@@ -10,9 +10,6 @@ import {
   BeforeAfterContainer,
   BeforeImage,
   AfterImage,
-  ImageOverlay,
-  ImageTitle,
-  ImageDescription,
   ComparisonLabel
 } from "./styles";
 import Container from "../../common/Container";
@@ -64,10 +61,6 @@ const Gallery = ({ t }: { t: TFunction }) => {
                     {hoveredImage === image.id ? "After" : "Before"}
                   </ComparisonLabel>
                 </BeforeAfterContainer>
-                <ImageOverlay>
-                  <ImageTitle>{t(image.title)}</ImageTitle>
-                  <ImageDescription>{t(image.description)}</ImageDescription>
-                </ImageOverlay>
               </ImageWrapper>
             ))}
           </ImageContainer>
