@@ -101,8 +101,8 @@ const Footer = ({ t }: { t: TFunction }) => {
               <Large as="div">Call or Text: (804) 661-2841</Large>
               <Para>Serving Danville, VA and nearby areas</Para>
               <ContactInfo>
-                <a href="mailto:cleanslatewashing@gmail.com">
-                  cleanslatewashing@gmail.com
+                <a href="mailto:cleanslateexperts@gmail.com">
+                  cleanslateexperts@gmail.com
                 </a>
               </ContactInfo>
               <GoogleReviewsLink 
