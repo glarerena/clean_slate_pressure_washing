@@ -66,6 +66,23 @@ const ContactInfo = styled.div`
   }
 `;
 
+const WebsiteCredit = styled.div`
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  
+  a {
+    color: #18216d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #ff8260;
+    }
+  }
+`;
+
 const Footer = ({ t }: { t: TFunction }) => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -133,6 +150,9 @@ const Footer = ({ t }: { t: TFunction }) => {
               </StyledSocialLink>
             </div>
           </Row>
+          <WebsiteCredit>
+            Created with ❤️ by <a href="https://renaglare.dev" target="_blank" rel="noopener noreferrer">renaglare.dev</a> © 2025
+          </WebsiteCredit>
         </Container>
       </Extra>
     </>
