@@ -6,57 +6,57 @@
       "id": 1,
       "title": "House Cleaning",
       "description": "Complete house pressure washing transformation",
-      "beforeImage": "/before_after/before pic of house.jpg",
-      "afterImage": "/before_after/after pic of front house cleaning.jpg"
+      "beforeImage": "/compressed_pics/before pic of house.webp",
+      "afterImage": "/compressed_pics/after pic of front house cleaning.webp"
     },
     {
       "id": 2,
       "title": "Deck Restoration",
       "description": "Professional deck cleaning and restoration",
-      "beforeImage": "/before_after/before pic deck cleaning.jpg",
-      "afterImage": "/before_after/after deck cleaning.jpg"
+      "beforeImage": "/compressed_pics/before pic deck cleaning.webp",
+      "afterImage": "/compressed_pics/after deck cleaning.webp"
     },
     {
       "id": 3,
       "title": "Commercial Building",
       "description": "Commercial property pressure washing",
-      "beforeImage": "/before_after/before pic of commercial building.jpg",
-      "afterImage": "/before_after/after pic of commercial building.jpg"
+      "beforeImage": "/compressed_pics/before pic of commercial building.webp",
+      "afterImage": "/compressed_pics/after pic of commercial building.webp"
     },
     {
       "id": 4,
       "title": "Gutter Cleaning",
       "description": "Professional gutter cleaning service",
-      "beforeImage": "/before_after/before pic of gutter cleaning.jpg",
-      "afterImage": "/before_after/after pic of gutter cleaning.jpg"
+      "beforeImage": "/compressed_pics/before pic of gutter cleaning.webp",
+      "afterImage": "/compressed_pics/after pic of gutter cleaning.webp"
     },
     {
       "id": 5,
       "title": "Metal Roof Cleaning",
       "description": "Specialized metal roof cleaning service",
-      "beforeImage": "/before_after/before pic metal roof.jpg",
-      "afterImage": "/before_after/after pic metal roof.jpg"
+      "beforeImage": "/compressed_pics/before pic metal roof.webp",
+      "afterImage": "/compressed_pics/after pic metal roof.webp"
     },
     {
       "id": 6,
       "title": "Sidewalk Cleaning",
       "description": "Surface cleaning and restoration",
-      "beforeImage": "/before_after/before pic sidewalk surface cleaning.jpg",
-      "afterImage": "/before_after/after pic sidewalk surface cleaning.jpg"
+      "beforeImage": "/compressed_pics/before pic sidewalk surface cleaning.webp",
+      "afterImage": "/compressed_pics/after pic sidewalk surface cleaning.webp"
     },
     {
       "id": 7,
       "title": "Garage Door Cleaning",
       "description": "Garage door cleaning and restoration",
-      "beforeImage": "/before_after/garage cleaning before pic.jpg",
-      "afterImage": "/before_after/garage cleaning after pic.jpg"
+      "beforeImage": "/compressed_pics/garage cleaning before pic.webp",
+      "afterImage": "/compressed_pics/garage cleaning after pic.webp"
     },
     {
       "id": 8,
       "title": "Entry Door Cleaning",
       "description": "Front door cleaning and restoration",
-      "beforeImage": "/before_after/door cleaning before pic.jpg",
-      "afterImage": "/before_after/door cleaning after pic.jpg"
+      "beforeImage": "/compressed_pics/door cleaning before pic.webp",
+      "afterImage": "/compressed_pics/door cleaning after pic.webp"
     }
   ]
 } 
