@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import {
   GallerySection,

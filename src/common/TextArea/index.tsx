@@ -15,7 +15,7 @@ const TextArea = ({ name, placeholder, t, onChange, ...rest }: Props) => {
       <StyledTextArea
         id={name}
         name={name}
-        placeholder={placeholder ? t(placeholder) : ""}
+        placeholder={placeholder ? String(t(placeholder)) : ""}
         onChange={onChange}
         {...rest}
       />
@@ -24,5 +24,3 @@ const TextArea = ({ name, placeholder, t, onChange, ...rest }: Props) => {
 };
 
 export default withTranslation()(TextArea);
-
-

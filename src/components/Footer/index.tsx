@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
@@ -6,12 +5,10 @@ import { SvgIcon } from "../../common/SvgIcon";
 import {
   FooterSection,
   Title,
-  NavLink,
   Extra,
   LogoContainer,
   Para,
   Large,
-  Chat,
   Language,
 } from "./styles";
 import styled from "styled-components";
